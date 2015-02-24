@@ -388,45 +388,10 @@ and download the SRA files listet above.
 \begin{lstlisting}
 mkdir -p ../../samples
 cd ../../samples
-cat <<EOF >samples.tsv
-# Samples of University Toronto, HiSeq2000, paper, 10/2011
-SRR352202	Root.full_L1	Cannabis sativa Purple Kush Root polyA RNA-Seq library PK-RT
-SRR352200	Shoot.full_L1	Cannabis sativa Purple Kush Shoot polyA RNA-Seq library PK-SHT
-SRR352198	Flower.pre_L1	Cannabis sativa Purple Kush Pre-Flower polyA RNA-Seq library PK-PFLW
-SRR352196	Flower.early_L1	Cannabis sativa Purple Kush Early-stage Flower polyA RNA-Seq library PK-EFLW
-SRR352195	Flower.mid_L1	Cannabis sativa Purple Kush Mid-stage Flower polyA RNA-Seq library PK-MFLW
-# Samples of Michigan State, Illumina Iix, 09/2011
-SRR306886	Leaf.mature_L1	Cannabis sativa mature leaf (fully expanded) RNA-Seq (CSA_AR)
-SRR306885	Leaf.mature_L2	Cannabis sativa mature leaf (fully expanded) RNA-Seq (CSA_AQ)
-SRR306884	Flower.buds_L1	Cannabis sativa flower buds RNA-Seq (CSA_AP)
-SRR306877	Stem.primary_L1	Cannabis sativa primary stem (entire) RNA-Seq (CSA_AO)
-SRR306875	Leaf.mature_L3	Cannabis sativa mature leaf (fully expanded) RNA-Seq (CSA_AN)
-SRR306874	Leaf.young_L1	Cannabis sativa young leaf (<25% expanded) RNA-Seq (CSA_AM)
-SRR306872	Leaf.young_L2	Cannabis sativa young leaf (<25% expanded) RNA-Seq (CSA_AL)
-SRR306871	Leaf.young_L3	Cannabis sativa young leaf (<25% expanded) RNA-Seq (CSA_AK)
-SRR306870	Flower.mature_L1	Cannabis sativa mature flower (fully expanded) RNA-Seq (CSA_AJ)
-SRR306869	Flower.mature_L2	Cannabis sativa mature flower (fully expanded) RNA-Seq (CSA_AI)
-SRR306868	Flower.mature_L3	Cannabis sativa mature flower (fully expanded) RNA-Seq (CSA_AH)
-SRR306867	Flower.buds_L2	Cannabis sativa flower-buds RNA-Seq (CSA_AG)
-SRR306866	Flower.buds_L3	Cannabis sativa flower- buds RNA-Seq (CSA_AF)
-SRR306865	Stem.petiole_L1	Cannabis sativa stem- petioles (entire) RNA-Seq (CSA_AE)
-SRR306864	Stem.petiole_L2	Cannabis sativa stem- petioles (entire) RNA-Seq (CSA_AD)
-SRR306863	Root.entire_L1	Cannabis sativa entire root RNA-Seq (CSA_AC)
-SRR306862	Root.entire_L2	Cannabis sativa entire root RNA-Seq (CSA_AB)
-SRR306861	Root.entire_L3	Cannabis sativa entire root RNA-Seq (CSA_AA)
-SRR192373	Stem.primary_L2	Cannabis sativa Primary Stem PE RNA-Seq (CSA_RI)
-EOF
 
-# tested with sratoolkit version 2.4.4-ubuntu64
-for i in $(grep -v "^#" samples.tsv | cut -f1)
-do
-    /path/to/sratoolkit/bin/fastq-dump -v --split-files $1 >$1.sra.log 2>$1.sra.err
-done
-
+/path/to/sratoolkit/bin/fastq-dump *
 \end{lstlisting}
-This dumps the fastq files for the SRAs in the samples directory. 
-Attention: The sra files are cached in the home directory if not configured otherwise.
-In the samples directory we now have a \texttt{\_1.fastq} file for each downloaded
+In the samples directory we now have a \texttt{.fq} file for each downloaded
 \texttt{.sra} file. The SRA files are no longer required so you can delete them
 to save some space. The next step is the quantification by mapping the reads
 onto the transcripts. This quantification is done separately for each sample in
