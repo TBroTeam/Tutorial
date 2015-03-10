@@ -1,10 +1,2 @@
 *~
-/build/
-/etc/*.php
-*/smarty/templates_c
-*/smarty/cache
-/nbproject/private/
-build.properties
-pdo_test.php
-db/tbro_demo_beta.sql
-queue_config.example.sql
+readthedocs/site/
