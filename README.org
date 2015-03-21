@@ -1,3 +1,4 @@
 * TBro Documentation Project
 The built version can be found at [[http://tbro-tutorial.readthedocs.org/en/latest/][readthedocs.org]]
-[![Documentation Status](https://readthedocs.org/projects/pip/badge/)](https://readthedocs.org/projects/pip/)
+Documentation state:
+[[https://readthedocs.org/projects/pip/badge/?version=stable][https://readthedocs.org/projects/pip/?badge=stable]]
