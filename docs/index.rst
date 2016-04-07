@@ -1,8 +1,8 @@
 TBro Tutorial
 =============
 
-This tutorial leads you through the process of loading transcriptomic
-data into TBro and analyzing it.
+This tutorial leads you through the process of installing and loading transcriptomic
+data into TBro as well as analyzing it.
 If you read this on readthedocs.org, please be aware that `Google Analytics
 <https://www.google.com/analytics/>`_ is used.
 
@@ -18,5 +18,6 @@ http://genomebiology.com/2011/12/10/R102.
 
 .. toctree ::
    :maxdepth: 2
-
+   
+   installation
    tutorial
