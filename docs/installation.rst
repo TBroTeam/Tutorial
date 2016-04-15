@@ -1,6 +1,9 @@
 Installation
 ============
 
+Docker
+------
+
 Installation of TBro is straightforward and easy using preconfigured `docker <https://www.docker.com/>`_ containers.
 See `docker documentation <https://docs.docker.com/engine/installation/>`_ on how to install docker on your machine.
 
@@ -13,6 +16,7 @@ After installation of docker execute the following commands to pull the docker i
         docker pull tbroteam/tbro_worker_ftp
         docker pull tbroteam/tbro_worker
         docker pull tbroteam/tbro_apache
+        # only required if predifined demo data should be loaded
         docker pull tbroteam/tbro_demo
 
 Now start the Chado database container and install the schema:
