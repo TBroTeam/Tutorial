@@ -69,9 +69,18 @@ Bringing the data into TBro
 ===========================
 
 For this tutorial it is assumed, that you have a fresh install of TBro
-as described in the manual @DIP\_TBRO. So you start with a ``CHADO``
-database with just a few slight modifications. So lets start populating
-the database with our first transcriptome.
+as described in the installation section.
+All commands are executed inside the TBro_official docker container.
+To enter this container do the following:
+
+::
+    docker exec -it TBro_official /bin/bash
+
+Alternatively you can download the tbro-cli tools to your local machine.
+But remember that you have to install them via phing and set the config.php properly (to point to the database in the docker container - find the ip via docker inspect)
+No demo data has been loaded to the database yet.
+These are the manual steps to load the demo data (resembling the automatic installation via tBro_demo docker container).
+So lets start populating the database with our first transcriptome.
 
 The Cannabis sativa transcriptome
 ---------------------------------
