@@ -44,14 +44,14 @@ Start a worker to execute the BLAST jobs:
 ::
 
     docker run -d --link Worker_DB_4_TBro_official:WORKER --link Worker_FTP_4_TBro_official:WORKERFTP --name "TBro_Worker_official" tbroteam/tbro_worker
-    docker exec -i -t TBro_Worker_official /home/tbro/worker_build_installation.sh 2> run_worker_build_installation.err > run_worker_build_installation.log
+    docker exec -i -t TBro_Worker_official /home/tbro/worker_build_installation.sh
 
 Finally start and install the main TBro container:
 
 ::
 
     docker run -d --link Chado_DB_4_TBro_official:CHADO --link Worker_FTP_4_TBro_official:WORKERFTP --link Worker_DB_4_TBro_official:WORKER --name "TBro_official" -p 80:80 tbroteam/tbro_apache
-    docker exec -i -t TBro_official /home/tbro/build_installation.sh 2> tbro_build_installation.err > tbro_build_installation.log
+    docker exec -i -t TBro_official /home/tbro/build_installation.sh
 
 You can now access the TBro web interface by pointing your browser to http://localhost 
 However there is no data loaded, yet.
