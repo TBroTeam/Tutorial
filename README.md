@@ -1,5 +1,5 @@
 # TBro Documentation Project
-The built version can be found at [readthedocs.org](http://tbro-tutorial.readthedocs.org/en/latest/)
+The built version can be found at [readthedocs.io](http://tbro-tutorial.readthedocs.io/en/latest/)
 
 Documentation state:
-[![Documentation Status](https://readthedocs.org/projects/tbro-tutorial/badge/?version=latest)](https://readthedocs.org/projects/tbro-tutorial/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/tbro-tutorial/badge/?version=latest)](http://tbro-tutorial.readthedocs.io/en/latest/?badge=latest)
