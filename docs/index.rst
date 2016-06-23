@@ -3,7 +3,7 @@ TBro Tutorial
 
 This tutorial leads you through the process of installing and loading transcriptomic
 data into TBro as well as analyzing it.
-If you read this on readthedocs.org, please be aware that `Google Analytics
+If you read this on readthedocs.io, please be aware that `Google Analytics
 <https://www.google.com/analytics/>`_ is used.
 
 Cannabis sativa transcriptome
