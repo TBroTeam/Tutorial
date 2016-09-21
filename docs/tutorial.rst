@@ -79,7 +79,7 @@ To enter this container do the following:
 Alternatively you can download the tbro-cli tools to your local machine.
 But remember that you have to install them via phing and set the config.php properly (to point to the database in the docker container - find the ip via docker inspect)
 No demo data has been loaded to the database yet.
-These are the manual steps to load the demo data (resembling the automatic installation via tBro_demo docker container).
+These are the manual steps to load the demo data (resembling the automatic installation via TBro_demo docker container).
 So lets start populating the database with our first transcriptome.
 
 The Cannabis sativa transcriptome
