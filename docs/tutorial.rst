@@ -117,7 +117,7 @@ subdirectory `transcriptome <transcriptome>`__
     mkdir -p cannabis_sativa/transcriptome 
     cd cannabis_sativa/transcriptome
 
-Download the transcriptome from ``NCBI``. To do so, search for
+Download the transcriptome from ``NCBI`` [1]_. To do so, search for
 ``74271[BioProject]`` on http://www.ncbi.nlm.nih.gov/nuccore and
 download all hits as fasta. There should be sequences. Save those to the
 file
@@ -895,4 +895,5 @@ Blast
    Blast results
 [fig:blast:sub:`r`\ esults\ :sub:`2`]
 
-{#section .unnumbered}
+.. [1] In this case we start with a pre-assembled transcriptome. For your own data it might be necessary to do the assembly from the raw reads yourself. The SOS pipeline https://github.com/SchulzLab/SOS is great for that purpose.
+
