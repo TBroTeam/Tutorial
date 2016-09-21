@@ -19,8 +19,8 @@ directory.
 Data
 ====
 
-The demo data consists of the published transcriptome of . And
-additional short read libraries of different samples.
+The demo data consists of the published transcriptome of /Cannabis sativa/.
+And additional short read libraries of different samples.
 
 Cannabis sativa
 ---------------
