@@ -666,11 +666,23 @@ appropriate sections like this:
 | You have to specify a location that can be reached by your worker
 machine. If you just want to have a single worker on the same machine as
 the server you can specify the location in the local file system
-starting with ``file://``. To perform the changes run the
-``queue_config.sql`` commands in your queue database.
+starting with ``file://``. If you used the docker setup you can load the
+files into the docker ftp container with curl (replace $WORKERFTP_FTP_USER,
+$WORKERFTP_FTP_PW and $WORKERFTP_IP with the respective values of your
+docker container):
+
+::
+
+   curl --data-binary --ftp-pasv --user "$WORKERFTP_FTP_USER":"$WORKERFTP_FTP_PW" -T cannabis_sativa_transcriptome.zip ftp://$WORKERFTP_IP/
+   curl --data-binary --ftp-pasv --user "$WORKERFTP_FTP_USER":"$WORKERFTP_FTP_PW" -T cannabis_sativa_predpep.zip ftp://$WORKERFTP_IP/
+
+
+To perform the changes run the ``queue_config.sql`` commands in your queue database.
+
 | Now TBro knows about the database and shows it in the web interface.
-To perform ``BLAST`` searches we need a worker to execute them. So
-create one with this command:
+To perform ``BLAST`` searches we need a worker to execute them. In case
+of the docker setup you already have a blast worker running. Otherwise
+you can create one with this command:
 
 ::
 
