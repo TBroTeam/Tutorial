@@ -667,8 +667,8 @@ appropriate sections like this:
 machine. If you just want to have a single worker on the same machine as
 the server you can specify the location in the local file system
 starting with ``file://``. If you used the docker setup you can load the
-files into the docker ftp container with curl (replace $WORKERFTP_FTP_USER,
-$WORKERFTP_FTP_PW and $WORKERFTP_IP with the respective values of your
+files into the docker ftp container with curl (replace ``$WORKERFTP_FTP_USER``,
+``$WORKERFTP_FTP_PW`` and ``$WORKERFTP_IP`` with the respective values of your
 docker container):
 
 ::
