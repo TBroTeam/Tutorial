@@ -121,6 +121,20 @@ subdirectory `transcriptome <transcriptome>`__
     mkdir -p cannabis_sativa/transcriptome 
     cd cannabis_sativa/transcriptome
 
+.. NOTE::
+
+    The following documentation requires you to perform the search at NCBI
+    yourself. It further assumes that you want to do all of the analyses
+    manually again. If you just want to learn how to import the data files
+    into TBro you can execute the following command:
+
+    ::
+
+        git clone https://github.com/TBroTeam/DemoData
+
+    In the new ``DemoData`` folder you find all the pre-calculated files.
+    So you only have to issue the ``tbro-db`` and ``tbro-import`` commands.
+
 Download the transcriptome from ``NCBI`` [1]_. To do so, search for
 ``74271[BioProject]`` on http://www.ncbi.nlm.nih.gov/nuccore and
 download all hits as fasta. There should be sequences. Save those to the
