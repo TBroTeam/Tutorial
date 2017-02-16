@@ -74,6 +74,7 @@ All commands are executed inside the TBro_official docker container.
 To enter this container do the following:
 
 ::
+
     docker exec -it TBro_official /bin/bash
 
 Alternatively you can download the tbro-cli tools to your local machine.
