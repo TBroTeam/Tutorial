@@ -134,7 +134,19 @@ subdirectory `transcriptome <transcriptome>`__
 
     In the new ``DemoData`` folder you find all the pre-calculated files.
     So you only have to issue the ``tbro-db`` and ``tbro-import`` commands.
-
+    
+    If you want to follow along with your own data instead you can copy your
+    file into the docker container with this command (outside the docker
+    container):
+    
+    ::
+        
+        docker cp MyTranscriptome.fasta TBro_official:/
+    
+    Please replace ``MyTranscriptome.fasta`` with your actual file name.
+    It will be available in the root of the file system ``/`` inside the
+    container.
+    
 Download the transcriptome from ``NCBI`` [1]_. To do so, search for
 ``74271[BioProject]`` on http://www.ncbi.nlm.nih.gov/nuccore and
 download all hits as fasta. There should be sequences. Save those to the
