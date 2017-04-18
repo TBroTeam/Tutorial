@@ -774,6 +774,26 @@ mapping. For a quick start you find the three files ``ec_info.tab``,
     tbro-tools addPathwayInformationToDB kegg_info.tab
     tbro-tools addEC2PathwayMapping ec_kegg_map.tab
 
+Custom Annotations
+~~~~~~~~~~~~~~~~~~
+
+Arbitrary key/value pairs can be added to isoforms and unigenes since TBro version 1.1.1
+All you need is a tsv file with two columns (unigene/isoform identifier and value).
+The key is given as a command-line parameter for the whole file.
+Consider the file ``custom.tsv``:
+
+::
+
+    <Identifier><TAB><Value>
+
+Importing this file into TBro with key ``my_custom_annotation`` you have to execute:
+
+::
+
+    tpro-import annotation_custom --annotation-type my_custom_annotation custom.tsv
+
+It is then possible to search via annotation search for custom annotations with key ``my_custom_annotation``.
+
 Any other transcriptome
 -----------------------
 
