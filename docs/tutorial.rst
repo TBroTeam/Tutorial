@@ -659,7 +659,11 @@ them:
 
 This zip files should now be moved in a location where it can be reached
 from the worker machines. To tell TBro about the ``BLAST`` databases you
-should issue the following command in yout main TBro directory:
+should issue the following command in your directory containing the TBro
+source code (``/home/tbro/`` in the docker container, but in the docker
+installation phing has already been executed, so you can skip this step,
+in case you want to execute it again make sure to run ``source ~/.bash_profile``
+first, otherwise ``phing`` will not be found.):
 
 ::
 
@@ -697,17 +701,19 @@ appropriate sections like this:
 machine. If you just want to have a single worker on the same machine as
 the server you can specify the location in the local file system
 starting with ``file://``. If you used the docker setup you can load the
-files into the docker ftp container with curl (replace ``$WORKERFTP_FTP_USER``,
-``$WORKERFTP_FTP_PW`` and ``$WORKERFTP_IP`` with the respective values of your
-docker container):
+files into the docker ftp container with curl:
 
 ::
 
-   curl --data-binary --ftp-pasv --user "$WORKERFTP_FTP_USER":"$WORKERFTP_FTP_PW" -T cannabis_sativa_transcriptome.zip ftp://$WORKERFTP_IP/
-   curl --data-binary --ftp-pasv --user "$WORKERFTP_FTP_USER":"$WORKERFTP_FTP_PW" -T cannabis_sativa_predpep.zip ftp://$WORKERFTP_IP/
+   curl --data-binary --ftp-pasv --user $WORKERFTP_ENV_FTP_USER:$WORKERFTP_ENV_FTP_PW -T cannabis_sativa_transcriptome.zip ftp://"$WORKERFTP_PORT_21_TCP_ADDR"/
+   curl --data-binary --ftp-pasv --user $WORKERFTP_ENV_FTP_USER:$WORKERFTP_ENV_FTP_PW -T cannabis_sativa_predpep.zip ftp://"$WORKERFTP_PORT_21_TCP_ADDR"/
 
 
-To perform the changes run the ``queue_config.sql`` commands in your queue database.
+To perform the changes run the ``queue_config.sql`` commands in your queue database:
+
+::
+
+    PGPASSWORD=$WORKER_ENV_DB_PW psql -U $WORKER_ENV_DB_USER -h $WORKER_PORT_5432_TCP_ADDR -p $WORKER_PORT_5432_TCP_PORT <queue_config.sql
 
 | Now TBro knows about the database and shows it in the web interface.
 To perform ``BLAST`` searches we need a worker to execute them. In case
