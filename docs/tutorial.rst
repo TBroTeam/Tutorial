@@ -697,7 +697,15 @@ appropriate sections like this:
 
     ...
 
-| You have to specify a location that can be reached by your worker
+The ``availability_filter`` column is very important it specifies for
+which organism and release the database is visible in the TBro interface.
+The form is ``{organism_id}_{release}``.
+As we only have a single organism (id: 13) and release (1.CasaPuKu) we
+set it to ``13_1.CasaPuKu``. If you want a single database to show up
+for multiple organisms or releases you have to specify multiple rows with
+different availability filters.
+
+You have to specify a location that can be reached by your worker
 machine. If you just want to have a single worker on the same machine as
 the server you can specify the location in the local file system
 starting with ``file://``. If you used the docker setup you can load the
