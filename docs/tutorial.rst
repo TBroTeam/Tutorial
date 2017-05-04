@@ -697,6 +697,9 @@ appropriate sections like this:
 
     ...
 
+It is important that the name column in ``database_files`` matches the
+base filename of the blast database in the zip file.
+
 The ``availability_filter`` column is very important it specifies for
 which organism and release the database is visible in the TBro interface.
 The form is ``{organism_id}_{release}``.
