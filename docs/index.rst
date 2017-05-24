@@ -21,3 +21,4 @@ http://genomebiology.com/2011/12/10/R102.
    
    installation
    tutorial
+   guides
