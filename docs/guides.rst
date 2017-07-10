@@ -54,3 +54,8 @@ Password protect TBro
 
 See the write up by 000generic at https://github.com/TBroTeam/TBro/issues/48
 
+
+TBro in Docker in Amazon's AWS Lightsail
+----------------------------------------
+
+Follow this protocol: https://benchling.com/s/prt-DHSo7HeddC5zM0x7x1Y4
